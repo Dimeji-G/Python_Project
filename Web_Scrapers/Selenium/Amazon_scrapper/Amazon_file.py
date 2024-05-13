@@ -70,23 +70,12 @@ import math
                     click_count = 1000000000
                 #Review_page
                 ASIN = asin
-                for _ in range(1, click_count):
-                    for x in range(2,12):
-                        try:
-                            try:
-                                PRODUCT_LINK = product_link
-                                REVIEWER = driver.find_element(By.XPATH, f'/html/body/div[1]/div[2]/div/div[1]/div/div[1]/div[5]/div[3]/div/div[{x}]/div/div/div[1]/a/div[2]').text
-                                CUSTOMER_RATING_TO_CLIENT = 'n/a'
-                                REVIEW_TITLE = driver.find_element(By.XPATH, f'/html/body/div[1]/div[2]/div/div[1]/div/div[1]/div[5]/div[3]/div/div[{x}]/div/div/div[2]/a/span[2]').text
-                                REVIEW = driver.find_element(By.XPATH, f'/html/body/div[1]/div[2]/div/div[1]/div/div[1]/div[5]/div[3]/div/div[{x}]/div/div/div[4]/span').text
-                                REVIEWED_IN =  driver.find_element(By.XPATH, f'/html/body/div[1]/div[2]/div/div[1]/div/div[1]/div[5]/div[3]/div/div[{x}]/div/div/span').text.split('on')[0][12:]
-                                REVIEW_DATE = driver.find_element(By.XPATH, f'/html/body/div[1]/div[2]/div/div[1]/div/div[1]/div[5]/div[3]/div/div[{x}]/div/div/span').text.split('on')[1]
-                                PEOPLE_F_T_USEFUL = 'n/a'
-                                try:
-                                    VERIFIED_PURCHASER = driver.find_element(By.XPATH, f'/html/body/div[1]/div[2]/div/div[1]/div/div[1]/div[5]/div[3]/div/div[{x}]/div/div/div[3]/span/a/span').text
-                                except:
-                                    VERIFIED_PURCHASER = 'n/a'                        
-                                review_data.append({
+  #
+#Censored
+ #                       #
+
+                        3
+                        review_data.append({
                                         'Asin': [asin],
                                         'Product Link': [product_link],
                                         'Shortened URL': [shortened_url],
