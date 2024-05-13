@@ -8,111 +8,15 @@ import time
 import pandas as pd
 import math
 #===========================================Headers=============================================
-option = Options()
-option.add_argument("start-maximized")
-#option.add_argument("--headless")
-option.add_argument("--disable-blink-features=AutomationControlled")
-option.add_experimental_option("excludeSwitches", ["enable-automation"])
-option.add_argument('log-level=3')
-driver = webdriver.Chrome(options=option)
-s = pyshorteners.Shortener()
-review_data = []
-total_time_next_page_was_clicked = 0
-df_reviews = pd.DataFrame(columns=['Asin', 'Product Link', 'Shortened URL', 'Reviewer', 'rating', 'Review Title', 'Review', 'Reviewed In', 'Review Date', 'People Found This Useful', 'Verified Purchaser'])
-url_link = "https://www.amazon.sa/-/en/gp/bestsellers/electronics/?ie=UTF8&ref_=sv_sv_elec_all_1"
-sleep_timer = 2
-#sleep_timer = input("How long do you want the timer to sleep: ")
-#===========================================Main_Code=============================================
-while True:
-    for category_selector in range(1,52):    
-        try:
-            driver.get(url_link)
-            if category_selector == 7:
-                continue
-            #time.sleep(5000)
-            test1 = driver.find_element(By.XPATH, f'/html/body/div[1]/div[2]/div/div/div[1]/div/div/div[2]/div[1]/div[1]/div[{category_selector}]')
-            test1.click()
-        except:
-            print('[+] invalid link type')
 
-        try:
-            #Front_List_Item_Page
-            asin_tag = driver.find_element(By.ID, "title_feature_div")
-            asin = asin_tag.get_attribute("data-csa-c-asin")
-            product_link = driver.current_url
-            try:
-                shortened_url = s.tinyurl.short(product_link)
-            except:
-                shortened_url = product_link
-            product_title_tag = driver.find_element(By.ID, 'productTitle')
-            product_title = product_title_tag.text
-            try:
-                In_Stock = driver.find_element(By.ID, 'availability').text
-            except:
-                In_Stock = 'Out_Of_Stock'
-            average_product_rating_number = driver.find_element(By.XPATH, '//*[@id="cm_cr_dp_d_rating_histogram"]/div[2]/div/div[2]/div/span/span').text.split('out')[0]
-            buying_history = driver.find_element(By.ID, 'social-proofing-faceout-title-tk_bought').text
-            total_ratings_with_comment = driver.find_element(By.XPATH, '//*[@id="cm_cr_dp_d_rating_histogram"]/div[3]/span').text.split('global')[0]
-            five_star_rating = driver.find_element(By.XPATH, '//*[@id="histogramTable"]/tbody/tr[1]/td[3]/a').text
-            four_star_rating = driver.find_element(By.XPATH, '//*[@id="histogramTable"]/tbody/tr[2]/td[3]/a').text    
-            three_star_rating = driver.find_element(By.XPATH, '//*[@id="histogramTable"]/tbody/tr[3]/td[3]/a').text
-            two_star_rating = driver.find_element(By.XPATH, '//*[@id="histogramTable"]/tbody/tr[4]/td[3]/a').text    
-            one_star_rating = driver.find_element(By.XPATH, '//*[@id="histogramTable"]/tbody/tr[5]/td[3]/a').text  
-            try:
-                full_list_price = driver.find_element(By.XPATH, '/html/body/div[4]/div/div[3]/div[10]/div[17]/div/div/div[3]/div[2]/span/span[1]/span[2]').text.replace('\n', " ")
-            except:
-                full_list_price = driver.find_element(By.XPATH, '//*[@id="corePriceDisplay_desktop_feature_div"]').text
-            try:
-                discounted_price = driver.find_element(By.XPATH, '/html/body/div[4]/div/div[3]/div[7]/div[8]/div/div[1]/div/div/div/form/div/div/div/div/div[3]/div/div[1]/div/div').text.replace('\n', '.')
-            except:
-                discounted_price = 0
-            try:
-                discount_percentage = driver.find_element(By.XPATH, '/html/body/div[4]/div/div[3]/div[10]/div[17]/div/div/div[3]/div[1]/span[2]').text
-            except:
-                discount_percentage = 0
-            try:
-                free_delivery = driver.find_element(By.XPATH, '/html/body/div[4]/div/div[3]/div[7]/div[8]/div/div[1]/div/div/div/form/div/div/div/div/div[4]/div/div[3]/div[10]/div[1]/div/div/div/span/a').text
-            except:
-                free_delivery = 'No'
-            try:
-                free_return = driver.find_element(By.ID, 'freeReturns_feature_div').text
-            except:
-                free_return = 'No'
-            try:
-                ships_from = driver.find_element(By.XPATH, '/html/body/div[4]/div/div[3]/div[7]/div[8]/div/div[1]/div/div/div/form/div/div/div/div/div[4]/div/div[20]/div[1]/div/div[1]/div[1]/div[2]/div[2]/div/span').text
-            except:
-                ships_from = 'n/a'
-            try:
-                sold_by = driver.find_element(By.XPATH, '/html/body/div[4]/div/div[3]/div[7]/div[8]/div/div[1]/div/div/div/form/div/div/div/div/div[4]/div/div[20]/div[1]/div/div[1]/div[1]/div[3]/div[2]/div/span').text
-            except:
-                sold_by = 'n/a'
-            try:
-                payment = driver.find_element(By.XPATH, '//*[@id="dynamicSecureTransactionFeature_feature_div"]/div[2]/span/a/span').text
-            except:
-                payment = 'n/a'
-            try:
-                brand = driver.find_element(By.XPATH, '//*[@id="poExpander"]/div[1]/div/table/tbody/tr[1]/td[2]/span').text
-            except:
-                brand = 'n/a'
-            get_it_b_tomorrow = 'n/a' 
-            main_category = 'n/a'
-            sub_category = 'n/a'
-            product_description = 'n/a'
-            weight = 'n/a'
-            condition = 'n/a'
-            product_dimension = 'n/a'
+# the code has been removed for confidential reasons, message the creator here
+# 
+#
+#or on whatsapp or Upwork for work details
+#+2348078595543
+#
 
-            #ITEMS PRINTING
-            # Create an empty DataFrame to store product details
-            item_product = pd.DataFrame(columns=['ASIN', 'Product Link', 'Shortened URL', 'Product Title', 'In Stock', 'Average Product Rating', 
-                                                'Buying History', 'Total Ratings with Comments', 'Five Star Rating', 'Four Star Rating', 
-                                                'Three Star Rating', 'Two Star Rating', 'One Star Rating', 'Full List Price', 
-                                                'Discounted Price', 'Discount Percentage', 'Free Delivery', 'Free Return', 
-                                                'Ships From', 'Sold By', 'Payment', 'Brand', 'Get It By Tomorrow', 
-                                                'Main Category', 'Sub Category', 'Product Description', 'Weight', 'Condition', 
-                                                'Product Dimension'])
-
-            # Append product details to the DataFrame
+# Append product details to the DataFrame
             item_product = item_product._append({
                 'ASIN': asin,
                 'Product Link': product_link,
