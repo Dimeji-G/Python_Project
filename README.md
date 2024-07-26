@@ -1,3 +1,3 @@
-Ukwedje Taiwo Work, Donations are allowed by messaging this number
-+2348078595543
-thanks in advance
+Ukwedje Taiwo Work
+you can contact me through my portfolio
+https://dimroid.github.io/Portfolio
